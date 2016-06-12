@@ -1,0 +1,23 @@
+﻿<div>
+    <p>Add a Social Event</p>
+
+    <div class="validationErrors" ng-show="validationErrors">
+
+        <p ng-repeat="errMsg in validationErrors">{{errMsg}}</p>
+
+    </div>
+
+    <form name="addEventForm" novalidate ng-submit="addEvent()">
+        <label for="Content">Content</label>
+        <input ng-model="socialEvent.Content" ng-required="true" name="content"/>
+        <label for="MapUrl">MapUrl</label>
+        <input ng-model="socialEvent.MapUrl"  type="text" name="mapurl" />
+        <label for="Title">Title</label>
+        <input ng-model="socialEvent.Title" ng-required="true"  type="text" name="title" />
+        <label for="EventDate">EventDate</label>
+        <input ng-model="socialEvent.EventDate" ng-required="true"  type="datetime-local" name="eventdate" />
+
+        <button type="submit" ng-disabled="addEventForm.$invalid">Save</button>
+        <button href="/" type="submit">Cancel</button>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+﻿<div>
+    <p>Edit Event</p>
+
+    <form novalidate ng-submit="editEvent()">
+        <label for="Content">Content</label>
+        <input ng-model="socialEvent.Content" name="content" />
+        <label for="MapUrl">MapUrl</label>
+        <input ng-model="socialEvent.MapUrl" type="text" name="mapurl" />
+        <label for="Title">Title</label>
+        <input ng-model="socialEvent.Title" type="text" name="title" />
+        <label for="EventDate">EventDate</label>
+        <input ng-model="socialEvent.EventDate" placeholder="yyyy-MM-ddTHH:mm" type="datetime-local" name="eventdate" required/>
+        <button type="submit">Save</button>
+        <button type="reset" class="btn" ng-click="cancelEdit()">Cancel</button>
+    </form>
+</div>

@@ -1,0 +1,8 @@
+﻿{
+    "AppSetting": {
+        "SiteTitle": "Social Events"
+    },
+    "Data": {
+        "ConnectionString":  "Server=.;Database=test;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.5",
+    "angular-resource": "1.4.5",
+    "angular-route": "1.4.5",
+    "jQuery": "2.1.4",
+    "bootstrap": "3.3.5"
+  },
+  "exportsOverride": {},
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "wwwroot/lib",
+    "test",
+    "tests"
+  ]
+}

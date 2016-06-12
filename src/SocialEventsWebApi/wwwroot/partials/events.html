@@ -1,0 +1,15 @@
+﻿<div>
+    <h2>All Social Events</h2>
+    <ul>
+        <li ng-repeat="socialEvent in socialEvents">
+            <p>"{{socialEvent.Title}} - {{socialEvent.EventDate | date:'medium'}}"</p>
+            <p>{{socialEvent.Content}}</p>
+            <a href="/events/edit/{{socialEvent.Id}}">Edit</a></p>
+            <a href="/events/delete/{{socialEvent.Id}}">Delete</a></p>
+            <iframe ng-src="{{socialEvent.MapUrl | trusted}}" frameborder="0" style="border:0" width="100%" height="100%;" allowfullscreen></iframe>
+        </li>
+        
+    </ul>
+
+    <p> <a href="/events/add"> Add a new social event</a></p>
+</div>
