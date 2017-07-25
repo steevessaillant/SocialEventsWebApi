@@ -36,11 +36,6 @@ namespace SocialEventsWebApi.api
         public IEnumerable<SocialEvent> Get()
         {
             return _dbContext.SocialEvents;
-            //return new List<SocialEvent> {
-            //    new SocialEvent { Id = 1, Content = "Content for 1", CreationDate = DateTime.Now, EventDate = DateTime.Now.AddDays(1),MapUrl="",Title="Event 1" } ,
-            //    new SocialEvent { Id = 2, Content = "Content for 2", CreationDate = DateTime.Now, EventDate = DateTime.Now.AddDays(2),MapUrl="",Title="Event 2" },
-            //    new SocialEvent { Id = 3, Content = "Content for 3", CreationDate = DateTime.Now, EventDate = DateTime.Now.AddDays(3),MapUrl="",Title="Event 3"}
-            //};
         }
 
         // GET api/values/5
@@ -57,7 +52,6 @@ namespace SocialEventsWebApi.api
             {
                 return new HttpNotFoundResult();
             }
-            //return "value";
         }
 
         // POST api/values
@@ -68,7 +62,6 @@ namespace SocialEventsWebApi.api
             {
                 if (socialEvent.Id == 0)
                 {
-                    //add new
                     socialEvent.CreationDate = DateTime.UtcNow;
                     socialEvent.EventDate = socialEvent.EventDate.ToLocalTime();
                     _dbContext.SocialEvents.Add(socialEvent);
@@ -77,7 +70,6 @@ namespace SocialEventsWebApi.api
                 }
                 else
                 {
-                    //update
                     return processUpdate(socialEvent);
                 }
             }
@@ -91,7 +83,6 @@ namespace SocialEventsWebApi.api
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]SocialEvent socialEvent)
         {
-            //update
             return processUpdate(socialEvent);
         }
 
